@@ -1,12 +1,13 @@
 public class ManageStudent {
 
     public static void main(String[] args) {
-        Student[] student = null;
+        //Student[] student = null;
 
         ManageStudent manageStudent = new ManageStudent();
 
-        student = manageStudent.addStudent();
-        manageStudent.printStudents(student);
+        //student = manageStudent.addStudent();
+        //manageStudent.printStudents(student);
+        manageStudent.checkEquals();
 
     }
 
@@ -21,8 +22,14 @@ public class ManageStudent {
 
     public void printStudents(Student[] student) {
         int studentLength = student.length;
-        for(int i=0; i < studentLength; i++) {
+        for (int i = 0; i < studentLength; i++) {
             System.out.println(student[i].toString());
         }
+    }
+
+    public void checkEquals() {
+        Student a = new Student("Min", "Seoul", "010XXXXXXXX", "ask@godofjava.com");
+        Student b = new Student("Min", "Seoul", "010XXXXXXXX", "ask@godofjava.com");
+        System.out.println(a.equals(b));
     }
 }
